@@ -11,7 +11,8 @@
     "format:check": "prettier -c ./src",
     "lint": "eslint ./src --fix",
     "lint:check": "eslint ./src",
-    "zombienet": "zombienet --provider native spawn ./tests/small-network.toml"
+    "zombienet:setup": "zombienet setup",
+    "zombienet:run": "zombienet --provider native spawn ./tests/small-network.toml"
   },
   "app": "dist/index.html",
   "targets": {
@@ -31,6 +32,7 @@
     "@polkadot/react-identicon": "2.9.14",
     "@react-spring/web": "9.6.1",
     "@use-gesture/react": "10.2.23",
+    "commander": "^9.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-iconly": "2.2.5",
