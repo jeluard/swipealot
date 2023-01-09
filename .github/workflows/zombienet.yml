@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 16
       - name: Install dependencies
-        run: yarn install --check-files
+        run: yarn install --check-files --ignore-optional
       - name: Setup zombinet
         run: yarn zombienet:setup
       - name: Run zombienet
