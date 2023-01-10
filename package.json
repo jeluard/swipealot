@@ -11,8 +11,8 @@
     "format:check": "prettier -c ./src",
     "lint": "eslint ./src --fix",
     "lint:check": "eslint ./src",
-    "zombienet:setup": "zombienet setup",
-    "zombienet:run": "zombienet --provider native spawn ./tests/small-network.toml"
+    "zombienet:linux:setup": "./tests/zombienet-linux-x64 setup",
+    "zombienet:linux:run": "./tests/zombienet-linux-x64 --provider native spawn ./tests/small-network.toml"
   },
   "app": "dist/index.html",
   "targets": {
@@ -64,5 +64,8 @@
     "@polkadot/x-ws": "./node_modules/@polkadot/x-ws/browser.js",
     "@polkadot/x-textencoder": "./node_modules/@polkadot/x-textencoder/browser.js",
     "@polkadot/x-textdecoder": "./node_modules/@polkadot/x-textdecoder/browser.js"
+  },
+  "resolutions": {
+    "napi-maybe-compressed-blob-win32-x64-msvc":"0.0.2"
   }
 }
